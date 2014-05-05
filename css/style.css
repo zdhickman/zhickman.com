@@ -1,0 +1,212 @@
+body {
+    padding-left: 20px;
+    font-family:'Signika', sans-serif;
+    background:url('./bgs/crossword.png');
+}
+header {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    width: 75%;
+    float: center;
+    margin: auto;
+}
+header h1 {
+    padding-top: 20px;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+.box-header {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 30px;
+}
+h1 {
+    font-family:'Roboto Slab', serif;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.box {
+    /*margin: 0 0 20px; */
+    padding: 20px 0 0;
+    padding-right: 20px;
+    /*-moz-border-radius: 4px; 
+  -webkit-border-radius: 4px; 
+  border-radius: 4px; 
+  -moz-box-shadow: inset 0 0 0 1px #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 15px;
+}
+.flipbox-container {
+    position: relative;
+    width: 15%;
+    /* desired width */
+    min-width: 250px;
+    float: left;
+    /*margin-left: 20px;
+  margin-right: 20px;*/
+    z-index: 1;
+    perspective: 1000;
+}
+.flipbox-container:before {
+    content:"";
+    display: block;
+    padding-top: 100%;
+    /* initial ratio of 1:1*/
+}
+.flipbox-container:hover {
+    /*box-shadow: 0px 0px 5px #000;*/
+}
+.resume {
+    background: #B7FF77;
+}
+.projects {
+    background: #E8BE6D;
+}
+.github {
+    background: #FF848A;
+}
+.linkedin {
+    background: #846DE8;
+}
+.about {
+    background: #7343FF;
+}
+.twitter {
+    background: #81B3E8;
+}
+.quake {
+    background: #8CFFE4;
+}
+.untitled {
+    background: #78E874;
+}
+.gravatar {
+    background: #46C9A9;
+}
+.keyblade {
+    background: #4391FF;
+}
+.odesk {
+    background: #E8C2A0;
+}
+.cssdeck {
+    background: #FF5886;
+}
+.so {
+    background: #E882E1;
+}
+.c4 {
+    background: #BB30FF;
+}
+.container {
+    width: 75%;
+    float: center;
+    margin: auto;
+}
+.brackets:before, .brackets:after {
+    position: absolute;
+    top: 20px;
+    /* Value depends on your design. */
+    color: transparent;
+    /* It makes the curly brackets invisible at the beginning.*/
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.brackets:hover:before, .brackets:hover:after {
+    color: white;
+    /* Or whatever colour you want. */
+}
+/* For movement */
+ .brackets:before {
+    content:"{";
+    left: -20px;
+}
+.brackets:hover:before {
+    left: 15px;
+}
+.brackets:after {
+    content:"}";
+    right: -20px;
+}
+.brackets:hover:after {
+    right: 15px;
+}
+
+.info .text {
+  margin: 20px 15px 0px 15px;
+}
+
+.info {
+    width:80%;
+    float:center;
+    font-family:'Signika', sans-serif;
+    text-align:left;
+    float:right;
+    font-size:15px;
+    color:black;
+    background:#C5CAC6;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    /*transform*/
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+    width:100%;
+    height:100%;
+}
+.flipbox-container {
+    /*perspective*/
+    -webkit-perspective:1000;
+    -moz-perspective:1000;
+    -ms-perspective:1000;
+    -o-perspective:1000;
+    /*perspective:1000;*/
+}
+.flipbox-container:hover .flipper {
+    /*transform*/
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+}
+.flipper {
+    /*transition*/
+    -webkit-transition:0.6s;
+    -moz-transition:0.6s;
+    -o-transition:0.6s;
+    transition:0.6s;
+    /*transform-style*/
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    position:absolute;
+    width:100%;
+    top:0;
+    height:100%;
+}
+.box, .info {
+    /*backface-visibility*/
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    backface-visibility:hidden;
+}
