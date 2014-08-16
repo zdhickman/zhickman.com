@@ -1,7 +1,6 @@
 body {
     padding-left: 20px;
     font-family:'Signika', sans-serif;
-    background:url('./bgs/crossword.png');
 }
 header {
     padding-bottom: 50px;
@@ -187,10 +186,10 @@ h1 {
 }
 .flipper {
     /*transition*/
-    -webkit-transition:0.6s;
-    -moz-transition:0.6s;
-    -o-transition:0.6s;
-    transition:0.6s;
+    -webkit-transition:0.75s;
+    -moz-transition:0.75s;
+    -o-transition:0.75s;
+    transition:0.75s;
     /*transform-style*/
     -webkit-transform-style:preserve-3d;
     -moz-transform-style:preserve-3d;
