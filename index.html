@@ -6,19 +6,56 @@
 	<script src="./js/jquery-2.1.1.min.js"></script>
 	<script src="./js/jquery.flip.js"></script>
 	<script src="./js/jquery-ui-1.10.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/splitchar/css/splitchar.css">
+	<script type="text/javascript" src="assets/splitchar/js/splitchar.js"></script>
 	<title>Zack Hickman</title>
 	<meta charset="UTF-8">
 	<script type="text/javascript">
-	$( document ).ready(function() {
-		var d = new Date();
-		var n = d.getFullYear();
-		$("#year").text(n.toString());
-	});
-	</script>
+    	$( document ).ready(function() {
+    		var d = new Date();
+    		var n = d.getFullYear();
+    		$("#year").text(n.toString());
+    		$(".splitchar").splitchar();
+    		pastelErrythang();
+    	});
+    	
+    	function generateRandomPastel() {
+            var red = Math.floor((Math.random() * 50) + 50);
+            var green = Math.floor((Math.random() * 100) + 125);
+            var blue = Math.floor((Math.random() * 100) + 150);
+            
+            return 'rgb('+ red.toString() + ', ' + green.toString() + ', ' + blue.toString() + ')';
+        }
+        
+        function pastelTheBoxes() {
+            $.each($('.box'),  function() {
+                $(this).css({
+                    background: generateRandomPastel() 
+                });
+            });
+        }
+        
+        function pastelErrythang() {
+            pastelTheBoxes();
+            pastelTheHeader();
+        }
+        
+        function pastelTheHeader() {
+            $('h1').css({
+               color: generateRandomPastel() 
+            });
+        }
+        
+        $(document).keypress(function() {
+            pastelErrythang();
+        });
+    </script>
 </head>
 <body>
 	<header>
-		<h1>Zack Hickman © <span id="year">2014</span></h1><a href="mailto:zhickman@ccs.neu.edu">zhickman@ccs.neu.edu</a>
+		<h1>Zack Hickman © <span id="year">2014</span></h1>
+		<br />
+		<a id="email" href="mailto:zhickman@ccs.neu.edu">zhickman@ccs.neu.edu</a>
 	</header>
 	<div class="container">
 
@@ -163,7 +200,7 @@
 					</div>
 					<div id="resume-info" class="info">
 						<div class="text">
-							Link to my CSSDeck profile, which contains pure-CSS recreations of popular logos and icons.
+							Link to my CSSDeck profile, which contains pure-CSS recreations of logos and icons.
 						</div>
 					</div>
 				</div>
@@ -177,6 +214,19 @@
 					<div id="resume-info" class="info">
 						<div class="text">
 							Link to my StackOverflow profile.
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="http://8tracks.com/ztheory">
+			<div class="flipbox-container">
+				<div class="flipper">
+					<div class="box 8t"><span class="box-header">8tracks</span><br /><br />
+					</div>
+					<div id="resume-info" class="info">
+						<div class="text">
+							Link to my 8tracks profile. 8tracks is a mixtape-sharing website.
 						</div>
 					</div>
 				</div>

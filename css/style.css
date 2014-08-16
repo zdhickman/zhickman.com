@@ -186,10 +186,10 @@ h1 {
 }
 .flipper {
     /*transition*/
-    -webkit-transition:0.75s;
-    -moz-transition:0.75s;
-    -o-transition:0.75s;
-    transition:0.75s;
+    -webkit-transition:0.55s;
+    -moz-transition:0.55s;
+    -o-transition:0.55s;
+    transition:0.55s;
     /*transform-style*/
     -webkit-transform-style:preserve-3d;
     -moz-transform-style:preserve-3d;
@@ -200,6 +200,7 @@ h1 {
     width:100%;
     top:0;
     height:100%;
+    border: 1px solid #FFFFFF;
 }
 .box, .info {
     /*backface-visibility*/
